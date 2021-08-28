@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+/* Variables
+
+$primary : #0a97b0; */
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+  font-weight: 300 !important;
+}
+
+a{
+  color: #0a97b0;
+}
+
+a:hover,
+a:focus,
+a:active{
+  color: #0a97b0;
+  text-decoration: none;
+}
+.color-primary{
+  color: #0a97b0;
+}
+
+
+header .navbar-nav li{
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+header .navbar-nav li:last-child{
+  background: #0a97b0;
+  color: #fff;
+  margin: 0;
+}
+header .navbar-nav li:last-child a{
+  background: #0a97b0;
+  color: #fff;
+  padding: 0 15px;
+}
+
+
+.hero-section{
+  min-height: 420px;
+  background: url("../images/hero-bg1.jpg") no-repeat;
+  background-size: cover;
+}
+
+#about p{
+  line-height: 2;
+}
+
+.services-section .card{
+  border: none;
+  border-left: 3px solid #0a97b0;
+}
+
+.features-section{
+  min-height: 300px;
+  background: url("../images/hero-bg.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.features-section .features-content{
+  min-height: 300px;
+}

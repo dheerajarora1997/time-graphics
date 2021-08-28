@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Time Graphics</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <main id="app">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">
+          <h1 class="h3">{{brandName}}</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-link" v-for="navItems in navigation">
+              <a :href='navItems.navLink'>{{navItems.navTitle}}</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section id="home">
+      <div class="hero-section d-flex flex-column justify-content-center align-items-center">
+        <template v-for="hero in banner">
+          <h1 class="font-weight-bold display-4 text-white">{{hero.bannerHeading}}</h1>
+          <p class="text-light">{{hero.bannerContent}}</p>
+        </template>
+      </div>
+    </section>
+    <section id="about">
+      <div class="container">
+        <div v-for="about in aboutSection" class="d-flex flex-column justify-content-center align-items-center py-4">
+          <h2 class="my-4">{{about.aboutHeading}}</h2>
+          <p class="text-center">{{about.aboutContent}}</p>
+        </div>
+      </div>
+    </section>
+    <section id="services" class="services-section bg-light">
+      <div class="container">
+        <h2 class="my-5 d-inline-block text-center w-100">Services</h2>
+        <div class="row">
+          <div class="col-sm-4 " v-for="service in services">
+            <div class="card mb-4 rounded-0 text-center">
+              <div class="card-body shadow">
+                <h3 class="h5 font-weight-light m-0 card-title text-left color-primary">{{service.serviceHeading}}</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="feature">
+      <div class="features-section">
+        <div class="container">
+          <div class="features-content d-flex justify-content-center flex-column w-75 mx-auto">
+            <p class="text-white h3 text-center">Very honest, reliable, and professional. I trust him fully and he knows what he is doing which is evident by the results he provides.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="row no-gutters">
+        <template v-for="contact in contacts">
+          <div class="col-sm-6 pt-5 p-3">
+            <h2 class="mb-4">Contact</h2>
+            <p>
+              <strong>Contact :</strong>
+              <span v-html="contact.contactNo"></span>
+            </p>
+            <p>
+              <strong>Email :</strong>
+              <span v-html="contact.contactEmail"></span>
+            </p>
+            <p>
+              <strong>Reach Us :</strong>
+              10/19 , Old Committee, opposite Sheetla Mata Mandir, Main Bazaar, Bahadurgarh, Haryana 124507
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <div style="line-height: 0;" v-html="contact.contactMap"></div>
+          </div>
+        </template>
+      </div>
+    </section>
+    <footer class="bg-dark">
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col-sm-6">
+            <div class="text-white py-2">
+              All Rights Reserved - {{ new Date().getFullYear() }}
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <p class="text-right m-0 text-white py-2">
+              Developed by
+              <a href="http://digiintern.com/" >
+                <strong>
+                  DigiIntern
+                </strong>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
